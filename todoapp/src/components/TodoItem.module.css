@@ -1,0 +1,9 @@
+.item {
+  font-size: large;
+  margin: 20px 40px 20px 0px;
+  padding: 20px;
+  background-color: white;
+}
+.button {
+  float: right;
+}

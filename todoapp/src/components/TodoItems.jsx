@@ -1,5 +1,5 @@
 import React from "react";
-
+import styles from "./TodoItem.module.css";
 export default function TodoItems({ item, todos, setTodos }) {
   function handleDelete(name) {
     console.log("Clicked ", name);
@@ -15,9 +15,14 @@ export default function TodoItems({ item, todos, setTodos }) {
   }
   return (
     <div>
-      <div key={item.name}>
+      <div className={styles.item} key={item.name}>
         <span onClick={() => handleComplete(item.name)}>{item.name}</span>
-        <button onClick={() => handleDelete(item.name)}>X</button>
+        <button
+          className={styles.button}
+          onClick={() => handleDelete(item.name)}
+        >
+          X
+        </button>
       </div>
     </div>
   );
