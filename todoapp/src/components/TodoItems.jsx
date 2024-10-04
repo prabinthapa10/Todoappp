@@ -1,0 +1,24 @@
+import React from "react";
+
+export default function TodoItems({ item, todos, setTodos }) {
+  function handleDelete(name) {
+    console.log("Clicked ", name);
+    setTodos(todos.filter((item) => item.name != name));
+  }
+
+  function handleComplete(name) {
+    setTodos(
+      todos.map((item) =>
+        item.name == name ? { ...item, done: !item.done } : item
+      )
+    );
+  }
+  return (
+    <div>
+      <div key={item.name}>
+        <span onClick={() => handleComplete(item.name)}>{item.name}</span>
+        <button onClick={() => handleDelete(item.name)}>X</button>
+      </div>
+    </div>
+  );
+}
