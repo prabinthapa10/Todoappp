@@ -1,4 +1,5 @@
 import React from "react";
+import TodoList from "./TodoList.jsx";
 
 export default function Form({ todo, setTodo, todos, setTodos }) {
   function handleSubmit(e) {
@@ -17,6 +18,7 @@ export default function Form({ todo, setTodo, todos, setTodos }) {
         />
         <button type="submit">Add</button>
       </form>
+      <TodoList todos={todos} setTodos={setTodos} />
     </div>
   );
 }
