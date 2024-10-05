@@ -13,10 +13,13 @@ export default function TodoItems({ item, todos, setTodos }) {
       )
     );
   }
+  const className = item.done ? styles.completed : "";
   return (
     <div>
       <div className={styles.item} key={item.name}>
-        <span onClick={() => handleComplete(item.name)}>{item.name}</span>
+        <span className={className} onClick={() => handleComplete(item.name)}>
+          {item.name}
+        </span>
         <button
           className={styles.button}
           onClick={() => handleDelete(item.name)}
