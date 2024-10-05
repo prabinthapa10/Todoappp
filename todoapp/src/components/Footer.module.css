@@ -1,0 +1,13 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 3em;
+  font-size: xx-large;
+  background-color: grey;
+  align-items: baseline;
+  text-align: center;
+}
+.total {
+  padding: 0px 40px 0px 0px;
+}
